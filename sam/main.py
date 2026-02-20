@@ -1,10 +1,11 @@
 import mlflow
+import torch
+import torch.nn as nn
 from sam import SAM
 from torch.optim import SGD, AdamW
-from utils import utils
-from utils import get_datasets, get_dataloaders
-from utils import get_model_resnet
-from utils import train_single_epoch, inference
+from utils.utils import get_datasets, get_dataloaders
+from utils.utils import get_model_resnet
+from utils.utils import train_single_epoch, inference
 
 
 if __name__ == "__main__":
@@ -79,7 +80,7 @@ if __name__ == "__main__":
         print(f"Training with {opt_name}")
         print(f"{'='*60}\n")
 
-        with mlflow.start_run(experiment_id=1):
+        with mlflow.start_run(experiment_id=0):
             # Set tags for easier filtering
             mlflow.set_tag("optimizer", opt_name)
             mlflow.set_tag("dataset", "CIFAR10")
