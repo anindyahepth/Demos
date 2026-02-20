@@ -50,7 +50,7 @@ class CifarDataset(Dataset):
 
         return dataset_dict
 ##############################################
-DATALOADERS
+###DATALOADERS
 ##############################################
 
 def get_datasets(augment=False):
@@ -95,7 +95,7 @@ def get_dataloaders(dataset_train, dataset_test):
 )
   return train_loader, test_loader
 ##############################################
-DISABLE_BN_STATS_FUNC
+###DISABLE_BN_STATS_FUNC
 ##############################################
 def disable_bn_stats(model):
     """
@@ -131,7 +131,7 @@ def get_model_resnet():
 
   return model
 ##############################################
-Training_Function
+#Training_Function
 ##############################################
 # trains model for one epoch and computes training loss and training accuracy
 
@@ -195,7 +195,7 @@ def train_single_epoch(model, train_loader, device, optimizer, epoch, criterion 
 
     return train_loss, train_acc
  ##############################################
-INFERENCE ON THE TEST DATASET
+###INFERENCE ON THE TEST DATASET
  ##############################################
 def inference(model, dataloader, device):
   model.eval()
