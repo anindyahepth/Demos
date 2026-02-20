@@ -1,6 +1,7 @@
 import mlflow
 from sam import SAM
 from torch.optim import SGD, AdamW
+from utils import utils
 from utils import get_datasets, get_dataloaders
 from utils import get_model_resnet
 from utils import train_single_epoch, inference
